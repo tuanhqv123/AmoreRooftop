@@ -43,14 +43,6 @@ export default function SlideShow() {
 
   return (
     <div className='mx-auto w-[85%] md:w-[75%]  lg:w-[55%] xl:w-[40%]'>
-      <div className='my-16 flex flex-row items-center justify-center'>
-        <div className='h-[1px] w-8 bg-gray-200 ' />
-        <div className='mx-1 px-2 py-4 text-center text-xs font-bold uppercase tracking-widest text-gray-500 lg:mx-4 lg:px-8'>
-          menu
-        </div>
-        <div className='h-[1px] w-8 bg-gray-200' />
-        <div />
-      </div>
       <div className='group relative h-[500px] w-full overflow-hidden rounded-3xl pt-[100%] shadow-lg md:h-[700px]'>
         <img src={slides[currentIndex].url} className='object-fit absolute left-0 top-0 h-full w-full bg-white' />
         <button
