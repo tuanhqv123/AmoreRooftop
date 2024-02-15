@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
+import classNames from 'classnames'
 import { useState } from 'react'
 
 export default function SlideShow() {
@@ -42,12 +43,12 @@ export default function SlideShow() {
   }
 
   return (
-    <div className='mx-auto w-[85%] md:w-[75%]  lg:w-[55%] xl:w-[40%]'>
-      <div className='group relative h-[500px] w-full overflow-hidden rounded-3xl pt-[100%] shadow-lg md:h-[700px]'>
-        <img src={slides[currentIndex].url} className='object-fit absolute left-0 top-0 h-full w-full bg-white' />
+    <div className='mx-auto w-full px-2 xs:w-[95%] xs:px-0 md:w-[75%]  lg:w-[55%] xl:w-[40%]'>
+      <div className='group relative h-[600px] overflow-hidden rounded-3xl pt-[100%] shadow-lg md:h-[700px]'>
+        <img src={slides[currentIndex].url} className='object-fit absolute left-0 top-0 h-full w-full bg-[#f3f1e0]' />
         <button
-          className='absolute left-0 top-[50%] hidden h-14 w-6 -translate-x-0 translate-y-[50%] cursor-pointer bg-gray-900/40 text-white group-hover:block'
-          onClick={next}
+          className='absolute left-0 top-[50%] hidden h-24 w-8 -translate-x-0 translate-y-[50%] cursor-pointer bg-gray-900/40 text-white group-hover:block'
+          onClick={prev}
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -61,8 +62,8 @@ export default function SlideShow() {
           </svg>
         </button>
         <button
-          className='absolute right-0 top-[50%] hidden h-14 w-6 -translate-x-0 translate-y-[50%] cursor-pointer bg-gray-900/40 text-white hover:shadow-xl group-hover:block'
-          onClick={prev}
+          className='absolute right-0 top-[50%] hidden h-24 w-8 -translate-x-0 translate-y-[50%] cursor-pointer bg-gray-900/40 text-white hover:shadow-xl group-hover:block'
+          onClick={next}
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -82,7 +83,11 @@ export default function SlideShow() {
           <button
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
-            className='mx-2 h-2 w-2 rounded-full bg-gray-700'
+            // className='mx-1 h-2 w-4 rounded-full bg-gray-500/40 focus:w-8 focus:bg-slate-900/40'
+            className={classNames('mx-1 h-1 rounded-full', {
+              'w-8 bg-slate-900/40': currentIndex === slideIndex,
+              'w-4 bg-gray-500/40': currentIndex !== slideIndex
+            })}
           ></button>
         ))}
       </div>

@@ -23,7 +23,7 @@ export default function Header() {
     setVisible(!isVisible)
   }
   return (
-    <header className='sticky top-0 z-50 bg-white pb-2 pt-4'>
+    <header className='sticky top-0 z-50 bg-[#f3f1e0] pb-2 pt-4'>
       <div className='container relative'>
         <nav className='flex flex-row items-center justify-between tracking-wider lg:justify-normal'>
           <Link
@@ -32,12 +32,12 @@ export default function Header() {
             offset={-150}
             duration={1200}
             to='home'
-            className='basis-4/6 cursor-pointer pl-6 text-left text-2xl font-bold xs:basis-3/6 md:pl-16'
+            className='basis-4/6 cursor-pointer pl-6 text-left text-3xl font-extrabold text-[#b13327] md:basis-3/6 md:pl-16'
           >
             Amore Rooftop
           </Link>
           <ul
-            className={`w-full basis-2/6 gap-2 bg-white text-sm font-medium uppercase text-gray-500 xs:basis-2/6 lg:flex lg:gap-8 ${isVisible && isMobile ? 'mobile-menu absolute top-10 flex flex-col text-center' : 'hidden'}`}
+            className={`w-full basis-2/6 gap-2 bg-[#f3f1e0] text-lg font-bold uppercase text-[#b13327] xs:basis-4/6 lg:flex lg:gap-8 ${isVisible && isMobile ? 'mobile-menu absolute top-10 flex flex-col text-center' : 'hidden'}`}
           >
             <Link
               spy={true}
