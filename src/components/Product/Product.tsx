@@ -22,7 +22,7 @@ export default function Product() {
   return (
     <>
       <div id='home' className='lg:mx-8'>
-        <div className='h-[530px] bg-transparent bg-[url(./src/assets/background1.jpeg)] bg-cover bg-bottom bg-no-repeat'>
+        <div className='h-[530px] bg-transparent bg-[url(https://scontent.fsgn5-6.fna.fbcdn.net/v/t39.30808-6/415002516_221022151052215_1762557854275856568_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=783fdb&_nc_ohc=7S1AYTmDUf8AX8jNiWl&_nc_ht=scontent.fsgn5-6.fna&cb_e2o_trans=t&oh=00_AfCrFqnY9HEcS1JqAfewB2h5IJYrlxiiWpRniYhb7B_9GA&oe=65D20399)] bg-cover bg-bottom bg-no-repeat'>
           <div className='flex h-full w-full flex-col items-center justify-center gap-6 bg-gray-900/40 text-white'>
             <div className='h-[140px] w-[140px] rounded-full bg-[url(https://scontent.fsgn2-11.fna.fbcdn.net/v/t39.30808-6/356921614_2423171001190515_5971255194470880670_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=RBCP-0drAmkAX8v4SSG&_nc_ht=scontent.fsgn2-11.fna&cb_e2o_trans=t&oh=00_AfBAJ0_hDeXBhM3TrW2q_zWz1fqc1Ec3v_rbT4jS69rQxw&oe=65D21D33)] bg-cover bg-center bg-no-repeat shadow-lg'></div>
             <div className='text-xs font-semibold tracking-widest opacity-80'>Coffee & Cocktail Bar</div>
